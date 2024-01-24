@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""lets define class Square"""
+"""Lets define class Square."""
+
 class Square:
-    """to represent a square"""
+    """To represent a square."""
     pass
