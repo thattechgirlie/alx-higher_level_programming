@@ -5,15 +5,15 @@
 class Rectangle:
     """Represent rectangle."""
     
-    def __init__(self, height=0, width=0):
+    def __init__(self, width=0, height=0):
         """Initialize new Rectangle.
         
         Args:
-            height (int): Height of new rectangle.
-            width (int): Width of new rectangle.
+            width (int): width of new rectangle.
+            height (int): height of new rectangle.
         """
-        self.height = height
         self.width = width
+        self.height = height
     
     @property
     def height(self):
