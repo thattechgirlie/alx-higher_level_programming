@@ -18,6 +18,7 @@ class Rectangle:
     def width(self):
         """Get width of Rectangle."""
         return self.__width
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -30,6 +31,7 @@ class Rectangle:
     def height(self):
         """Get height of Rectangle."""
         return self.__height
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
@@ -54,7 +56,7 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
-        
+
         rect = []
         for a in range(self.__height):
             [rect.append('#') for b in range(self.__width)]
