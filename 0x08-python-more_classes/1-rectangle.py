@@ -4,22 +4,22 @@
 
 class Rectangle:
     """Represent rectangle."""
-    
+
     def __init__(self, width=0, height=0):
         """Initialize new Rectangle.
-        
+
         Args:
             width (int): width of new rectangle.
             height (int): height of new rectangle.
         """
         self.width = width
         self.height = height
-    
+
     @property
     def height(self):
         """Get height of rectangle."""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
@@ -32,7 +32,7 @@ class Rectangle:
     def width(self):
         """Get width of rectangle."""
         return self.__width
-        
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
