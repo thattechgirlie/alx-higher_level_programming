@@ -18,6 +18,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
+
 class TestBase_instantiation(unittest.TestCase):
     """Unittest for testing Base class instantiation."""
     def test_no_arg(self):
