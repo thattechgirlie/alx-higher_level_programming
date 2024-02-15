@@ -101,23 +101,25 @@ class TestBase_instantiation(unittest.TestCase):
         self.assertNotEqual(float('nan'), Base(float('nan')).id)
 
     def test_two_args(self):
-        self.assertRaises(TypeError): Base(1, 2)
+        with self.assertRaises(TypeError):
+            Base(1, 2)
 
 class TestBase_to_json_string(unittext.TestCase):
     """Unittest to test to_json_string of Base Class."""
 
-
     def test_to_json_string_rectangle_type(self):
         r = Rectangle(10, 7, 2, 8, 6)
+        self.assertEqual(str, type(Base.to_json_string([r.to_dictionary()])))
 
-self.assertTrue(len(Base.to_json_string([r.to_dictionary()])) == 53)
+    def test_to_json_string_rectangle_one_dict(self):
+        r = Rectangle(10, 7, 2, 8, 6)
+        self.assertTrue(len(Base.to_json_string([r.to_dictionary()])) == 53)
 
     def test_to_json_string_rectangle_two_dicts(self):
         r1 = Rectangle(2, 3, 5, 19, 2)
         r2 = Rectangle(4, 2, 4, 1, 12)
         list_dicts = [r1.to dictionary(), r2.to_dictionary()]
-
-self.assertTrue(len(Base.to_json_string([r.to_dictionary()])) == 106)
+        self.assertTrue(len(Base.to_json_string([r.to_dictionary()])) == 106)
 
     def test_to_json_string_square_type(self):
         s = Square(10, 2, 3, 4)
@@ -125,15 +127,13 @@ self.assertTrue(len(Base.to_json_string([r.to_dictionary()])) == 106)
 
     def test_to_json_string_square_one_dict(self):
         s = Square(10, 2, 3, 4)
-
-self.assertTrue(len(Base.to_json_string([r.to_dictionary()])) == 39)
+        self.assertTrue(len(Base.to_json_string([r.to_dictionary()])) == 39)
 
     def test_to_json_string_square_two_dicts(self):
         s1 = Square(10, 2, 3, 4)
         s2 = Square(4, 5, 21, 2)
         list_dicts = [s1.to_dictionary(), s2.to_dictionary()]
-
-self.assertTrue(len(Base.to_json_string([r.to_dictionary()])) == 78)
+        self.assertTrue(len(Base.to_json_string([r.to_dictionary()])) == 78)
 
     def test_to_json_string_empty_list(self):
         self.assertEqual("[]", Base.to_json_string(None))

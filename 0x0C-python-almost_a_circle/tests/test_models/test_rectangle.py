@@ -129,7 +129,7 @@ class TestRectangle_width(unittest.TestCase):
             Rectangle(complex(5), 2)
 
     def test_dict_width(self):
-[O        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Rectangle({"a": 1, "b": 2}, 2)
 
     def test_bool_width(self):
@@ -630,7 +630,7 @@ class TestRectangle_update_args(unittest.TestCase):
     def test_update_args_y_negative(self):
         r = Rectangle(10, 10, 10, 10, 10)
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
-            r.update(89, 1, 2, 3, -6))
+            r.update(89, 1, 2, 3, -6)
 
     def test_update_args_width_before_height(self):
         r = Rectangle(10, 10, 10, 10, 10)
@@ -778,7 +778,7 @@ class TestRectangle_to_dictionary(unittest.TestCase):
 
     def test_to_dictionary_output(self):
         r = Rectangle(10, 2, 1, 9, 5)
-        correct = {'x': 1, 'y': 9, 'id': 5, 'height': 2, 'width': 10}}
+        correct = {'x': 1, 'y': 9, 'id': 5, 'height': 2, 'width': 10}
         self.assertDictEqual(correct, r.to_dictionary())
 
     def test_to_dictionary_no_object_changes(self):
