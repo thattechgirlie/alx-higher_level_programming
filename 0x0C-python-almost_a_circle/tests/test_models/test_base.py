@@ -119,7 +119,7 @@ class TestBase_to_json_string(unittext.TestCase):
         r1 = Rectangle(2, 3, 5, 19, 2)
         r2 = Rectangle(4, 2, 4, 1, 12)
         list_dicts = [r1.to dictionary(), r2.to_dictionary()]
-        self.assertTrue(len(Base.to_json_string([r.to_dictionary()])) == 106)
+        self.assertTrue(len(Base.to_json_string(list_dicts)) == 106)
 
     def test_to_json_string_square_type(self):
         s = Square(10, 2, 3, 4)
