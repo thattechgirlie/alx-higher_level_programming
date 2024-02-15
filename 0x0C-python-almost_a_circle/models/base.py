@@ -1,15 +1,17 @@
 #!/usr/bin/python3
-"""Defining base model."""
+"""Defining base model class."""
 import json
 import csv
 import turtle
 
 
 class Base:
-    """Base model.
+    """Representing base model.
+
     Represents the "base" for all other classes in almost a circle project.
-    Private Class Attributes:
-        __nb_object (int): Number of indtantiated Bases.
+    
+    Attributes:
+        __nb_object (int): Number of instantiated Bases.
     """
 
     __nb_objects = 0
