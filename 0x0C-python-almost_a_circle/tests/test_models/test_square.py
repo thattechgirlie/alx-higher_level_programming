@@ -49,7 +49,7 @@ class TestSquare_instantiation(unittest.TestCase):
         self.assertEqual(s1.id, s2.id - 1)
 
     def test_four_args(self):
-        self.asserEqual(7, Square(10, 2, 2, 7).id)
+        self.assertEqual(7, Square(10, 2, 2, 7).id)
 
     def test_more_than_four_args(self):
         with self.assertRaises(TypeError):
@@ -614,24 +614,24 @@ class TestSquare_update_kwargs(unittest.TestCase):
     def test_update_args_and_kwargs(self):
         s = Square(10, 10, 10, 10)
         s.update(89, 2, y=6)
-        self.assertEqual("[square] (89) 10/10 - 2", str(s))
+        self.assertEqual("[Square] (89) 10/10 - 2", str(s))
 
     def test_update_kwargs_wrong_keys(self):
         s = Square(10, 10, 10, 10)
         s.update(a=5, b=10)
-        self.assertEqual("[square] (10) 10/10 - 10", str(s))
+        self.assertEqual("[Square] (10) 10/10 - 10", str(s))
 
     def test_update_kwargs_some_wrong_keys(self):
         s = Square(10, 10, 10, 10)
         s.update(size=5, id=89, a=1, b=54)
-        self.assertEqual("[square] (89) 10/10 - 5", str(s))
+        self.assertEqual("[Square] (89) 10/10 - 5", str(s))
 
 class TestSquare_to_dictionary(unittest.TestCase):
     """Unittests for testing to_dictionary method of class Square."""
 
     def test_to_dictionary_output(self):
         s = Square(10, 2, 1, 1)
-        correct = {'id': 1, 'x': 2, 'size':10, 'y':1}
+        correct = {'id': 1, 'x': 2, 'size': 10, 'y': 1}
         self.assertDictEqual(correct, s.to_dictionary())
 
     def test_to_dictionary_no_object_changes(self):

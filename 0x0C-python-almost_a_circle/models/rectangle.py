@@ -75,7 +75,7 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
-        self.__x = value
+        self.__y = value
 
     def area(self):
         """Return area of Rectangle."""
@@ -86,6 +86,7 @@ class Rectangle(Base):
         if self.width == 0 or self.height == 0:
             print("")
             return
+
         [print("") for y in range(self.y)]
         for h in range(self.height):
             [print(" ", end="") for x in range(self.x)]

@@ -50,19 +50,20 @@ class Square(Rectangle):
                 elif r == 3:
                     self.y = arg
                 r += 1
+        
         elif kwargs and len(kwargs) != 0:
-            for k, a in kwargs.items():
+            for k, v in kwargs.items():
                 if k == "id":
-                    if a is None:
+                    if v is None:
                         self.__init__(self.size, self.x, self.y)
                     else:
-                        self.id = a
+                        self.id = v
                 elif k == "size":
-                    self.size = a
+                    self.size = v
                 elif k == "x":
-                    self.x = a
+                    self.x = v
                 elif k == "y":
-                    self.y = a
+                    self.y = v
 
     def to_dictionary(self):
         """Return dictionary representation of Square."""
