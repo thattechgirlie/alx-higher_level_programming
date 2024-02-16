@@ -4,7 +4,7 @@
 
 def add_integer(a, b=98):
     """Gives us addition of a and b.
-    
+
     Typecast float arguments to integers before performing addition.
 
     Raises:
