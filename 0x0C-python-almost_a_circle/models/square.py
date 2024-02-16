@@ -71,7 +71,7 @@ class Square(Rectangle):
                 "width": self.width,
                 "x": self.x,
                 "y": self.y
-                }
+        }
 
     def __str__(self):
         """Return print() and str() rep of Square."""

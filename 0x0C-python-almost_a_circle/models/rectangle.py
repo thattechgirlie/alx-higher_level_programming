@@ -53,7 +53,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """Get coordinate of Rectangle."""
+        """Get x coordinate of Rectangle."""
         return self.__x
 
     @x.setter
@@ -66,7 +66,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """Get coordinate of Rectangle."""
+        """Get y coordinate of Rectangle."""
         return self.__y
 
     @y.setter
@@ -144,11 +144,8 @@ class Rectangle(Base):
                 "height": self.height,
                 "x": self.x,
                 "y": self.y
-                }
+        }
 
     def __str__(self):
         """Return print() and str() rep of Rectangle."""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
-
-
-
