@@ -14,6 +14,7 @@ Usage
 	>>> add_integer = __import__('0-add_integer').add_integer
 	>>> add_integer(2, 3)
 	5
+
 ::
 
 	>>> add_integer(2, -3)
@@ -42,7 +43,7 @@ Floating and non floating values can be combined.
 
 ::
 
-	>>>add_integer(2.3, -3)
+	>>> add_integer(2.3, -3)
 	-1
 
 Second argument is optional - by default, it is 98.
@@ -60,13 +61,13 @@ If either argument is a non-integer and non-float,raise TypeError:
 
 ::
 
-	>>>add_integer("bonjour", 3)
+	>>> add_integer("bonjour", 3)
 	Traceback (most recent call last):
 	TypeError: a must be an integer
 
 ::
 
-	>>>add_integer(2, "bonjour")
+	>>> add_integer(2, "bonjour")
 	Traceback (most recent call last):
 	TypeError: b must be an integer
 
