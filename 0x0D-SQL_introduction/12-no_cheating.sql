@@ -1,0 +1,1 @@
+-- Updates score of Bob to 10.
