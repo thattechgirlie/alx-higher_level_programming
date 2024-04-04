@@ -10,16 +10,21 @@ Usage
 Squares are printed using ``#`` character.parameter ``size`` represents height and width of square.
 
 ::
+
 	>>> print_square = __import__('4-print_square').print_-square
 	>>> print_square(1)
 	#
+
 ::
+
 	>>> print_square(4)
 	####
 	####
 	####
 	####
+
 ::
+
 	>>> print_square(10)
 	##########
 	##########
@@ -31,39 +36,56 @@ Squares are printed using ``#`` character.parameter ``size`` represents height a
 	##########
 	##########
 	##########
+
 If ``size`` is zero, function prints nothing.
+
 ::
+
 	>>> print_square(0)
 
 Invalid Sizes
 =============
+
 Parameter ``size`` must be an integer. Otherwise, raise TypeError.
+
 ::
+
 	>>> print_square("not an int")
 	Traceback (most recent call last):
 	TypeError: size must be an integer
+
 ::
+
 	>>> print_square(5.5)
 	Traceback (most recent call last):
 	TypeError: size must be an integer
+
 ::
+	
 	>>> print_square(None)
 	Traceback (most recent call last):
 	TypeError: size must be an integer
+
 If ``size`` is less than zero, raise ValueError.
+
 ::
+	
 	>>> print_square(-7)
 	Traceback (most recent call last):
 	ValueError: size must be >= 0
 
 Type checking occurs before value checking.
+
 ::
+
 	>>> print_square(-7.5)
 	Traceback (most recent call last):
 	TypeError: size must be an integer
 
 At least one argument must be provided
+
 ::
+
 	>>> print_square()
 	Traceback (most recent call last):
 	TypeError: print_square() missing 1 required positional argument: 'size'
