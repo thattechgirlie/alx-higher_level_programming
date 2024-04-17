@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-script that deletes all State objects with a name containing the letter a from the database hbtn_0e_6_usa
+script deletes all State objects with name containing letter a hbtn_0e_6_usa
 """
 
 import sys

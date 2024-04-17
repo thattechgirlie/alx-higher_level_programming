@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-script that changes the name of a State object from the database hbtn_0e_6_usa
- should take 3 arguments: mysql username, mysql password and database name
+script changes name of a State object from database hbtn_0e_6_usa
+should take 3 arguments
 """
 
 import sys
