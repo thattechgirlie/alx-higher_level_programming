@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""  Lists all states with a name starting with N (upper N) from the database hbtn_0e_0_usa
-script should take 3 arguments: mysql username, mysql password and database name"""
+"""Lists all states starting with N (upper N) from hbtn_0e_0_usa
+script should take 3 arguments"""
 
 import sys
 import MySQLdb
