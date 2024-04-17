@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-script that prints  State object with the name passed as argument from hbtn_0e_6_usa
+script prints State object with the
+ name passed as argument from hbtn_0e_6_usa
 """
 
 import sys
